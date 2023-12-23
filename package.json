@@ -1,0 +1,15 @@
+{
+  "name": "hall-booking-app",
+  "version": "1.0.0",
+  "description": "hall bookig app using node, express, mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "ayyappan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
