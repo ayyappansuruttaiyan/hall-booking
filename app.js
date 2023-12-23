@@ -25,6 +25,11 @@ const bookings = [
   },
 ];
 
+// List all available rooms
+app.get("/", (req, res) => {
+  res.status(200).json(rooms);
+});
+
 // Creating a room
 app.post("/api/rooms", (req, res) => {
   const { seats, amenities, price } = req.body;
@@ -35,6 +40,7 @@ app.post("/api/rooms", (req, res) => {
     price,
   };
   rooms.push(room);
+  // 201 code - used for resource successfull creation
   res.status(201).json(room);
 });
 
@@ -55,6 +61,7 @@ app.post("/api/bookings", (req, res) => {
   };
 
   bookings.push(booking);
+  // 201 api code - used for resource successfull creation
   res.status(201).json(booking);
 });
 
